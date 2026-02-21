@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Skills - Swapify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo-area">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="logo-img">
+            <div class="logo-text">Swapify</div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Skills</a>
+            <a href="#">How It Works</a>
+            <a href="#">Contact</a>
+
+            <button class="register-btn" onclick="location.href='register.html'">Register</button>
+            <button class="login-btn" onclick="location.href='login.html'">Login</button>
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE CONTENT -->
+    <section class="browse-container">
+
+        <h1>Browse Skills</h1>
+
+        <!-- SEARCH / FILTER / SORT -->
+        <div class="browse-controls">
+
+            <input type="text" id="searchBox" placeholder="Search skills..." onkeyup="searchSkills()">
+
+            <select id="filterBox" onchange="filterSkills()">
+                <option value="all">All Categories</option>
+                <option value="tech">Technology</option>
+                <option value="creative">Creative</option>
+                <option value="language">Language</option>
+            </select>
+
+            <button onclick="sortSkills()">Sort A-Z</button>
+
+        </div>
+
+
+        <!-- SKILLS GRID -->
+        <div id="skillsList" class="skills-grid">
+
+            <div class="skill-card" data-category="tech">HTML Basics</div>
+            <div class="skill-card" data-category="tech">Python Programming</div>
+            <div class="skill-card" data-category="tech">Excel Formulas</div>
+
+            <div class="skill-card" data-category="creative">Photography</div>
+            <div class="skill-card" data-category="creative">Graphic Design</div>
+            <div class="skill-card" data-category="creative">Video Editing</div>
+
+            <div class="skill-card" data-category="language">Spoken English</div>
+            <div class="skill-card" data-category="language">Hindi Conversation</div>
+            <div class="skill-card" data-category="language">Public Speaking</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JS LINK -->
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
